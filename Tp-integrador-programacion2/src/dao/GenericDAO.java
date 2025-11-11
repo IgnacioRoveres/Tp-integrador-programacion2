@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface GenericDAO<T> {
     
-    // Todos los métodos aceptan Connection conn y propagan SQLException
     void insertar(T entidad, Connection conn) throws SQLException;
     void actualizar(T entidad, Connection conn) throws SQLException;
-    void eliminar(Long id, Connection conn) throws SQLException; // ID LONG para BIGINT y Baja Lógica
-    T getById(Long id, Connection conn) throws SQLException;
+    void eliminar(int id, Connection conn) throws SQLException;
+    T getById(int id, Connection conn) throws SQLException;
     List<T> getAll(Connection conn) throws SQLException;
     
+    T buscarPorCampoUnicoInt(int valor, Connection conn) throws SQLException; 
 }
