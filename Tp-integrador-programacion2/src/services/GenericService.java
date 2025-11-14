@@ -21,6 +21,4 @@ public interface GenericService<T> {
     /** Lista todas las entidades activas (eliminado=FALSE). */
     List<T> getAll() throws SQLException;
     
-    // Podrías añadir también la firma para buscar por campo único si fuera un requisito
-    // T buscarPorCampoUnico(String valor) throws SQLException;
 }
